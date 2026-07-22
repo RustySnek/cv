@@ -9,3 +9,10 @@ devenv.local.nix
 # pre-commit
 .pre-commit-config.yaml
 
+
+# LaTeX build artifacts
+cv.pdf
+cv.aux
+cv.log
+cv.out
+*.synctex.gz

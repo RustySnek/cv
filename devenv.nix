@@ -13,6 +13,18 @@
   # https://devenv.sh/scripts/
   scripts.hello.exec = "echo hello from $GREET";
 
+  # Build the CV. Phone number is NOT stored in the repo; pass it via $PHONE
+  # to include it, otherwise the mobile line is omitted.
+  #   build-cv                              -> no phone (safe, committable)
+  #   PHONE="" build-cv    -> phone injected at compile time
+  scripts.build-cv.exec = ''
+    if [ -n "$PHONE" ]; then
+      xelatex -jobname=cv "\def\phone{$PHONE}\input{cv.tex}"
+    else
+      xelatex -jobname=cv cv.tex
+    fi
+  '';
+
   enterShell = ''
     hello
     git --version
