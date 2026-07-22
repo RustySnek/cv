@@ -8,7 +8,7 @@
 
 ## Check it out!
 
-Latest version [HERE](https://github.com/RustySnek/cv/releases/download/V4.0/cv.pdf)
+Latest version [HERE](https://github.com/RustySnek/cv/releases/latest/download/cv.pdf)
 
 ## How to Use
 
