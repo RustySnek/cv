@@ -16,7 +16,7 @@
   # Build the CV. Phone number is NOT stored in the repo; pass it via $PHONE
   # to include it, otherwise the mobile line is omitted.
   #   build-cv                              -> no phone (safe, committable)
-  #   PHONE="" build-cv    -> phone injected at compile time
+  #   PHONE="(+48) 000-000-000" build-cv    -> phone injected at compile time
   scripts.build-cv.exec = ''
     if [ -n "$PHONE" ]; then
       xelatex -jobname=cv "\def\phone{$PHONE}\input{cv.tex}"

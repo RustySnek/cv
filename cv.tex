@@ -33,6 +33,11 @@
 % Define custom purple color
 \definecolor{awesome}{HTML}{A855F7}
 
+% Light-blue underlined hyperlink, used for project/site links
+% Usage: \weblink{https://url}{Label}
+\definecolor{linkblue}{HTML}{4EA1F3}
+\newcommand{\weblink}[2]{\href{#1}{\textcolor{linkblue}{\underline{#2}}}}
+
 % Colors for text
 % Uncomment if you would like to specify your own color
 % \definecolor{darktext}{HTML}{414141}
